@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height        : 40vmin;
   pointer-events: none;
 }
 
@@ -15,13 +15,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height      : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  font-size       : calc(10px + 2vmin);
+  color           : white;
 }
 
 .App-link {
@@ -32,7 +32,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.label {
+  position   : absolute;
+  margin-top : 35px;
+  color      : gray;
+  margin-left: 50px;
+}
+
+.MuiFormControl-root {
+  width: 30%;
+}
+
+.Form {
+  display           : flex;
+  width             : 50%;
+  margin            : auto;
+  /* border         : 2px green solid; */
+  /* grid-column-gap: 10px; */
+}
+
+.First_Quater {
+  width: 100%;
+}
+
+.css-2b097c-container {
+  margin-top: 10px;
+}
+
+.Next {
+  margin-right    : 65px !important;
+  color           : #fff;
+  background-color: #3f51b5;
+  margin-top      : 15px !important;
 }
