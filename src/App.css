@@ -40,21 +40,23 @@
 
 .label {
   position   : absolute;
-  margin-top : 35px;
+  margin-top : -40px;
   color      : gray;
-  margin-left: 50px;
+  margin-left: 260px;
 }
 
 .MuiFormControl-root {
-  width: 30%;
+  width           : 30%;
+  /* margin-bottom: 10px; */
 }
 
 .Form {
   display           : flex;
   width             : 50%;
   margin            : auto;
-  /* border         : 2px green solid; */
+  border            : 1px gray solid;
   /* grid-column-gap: 10px; */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .First_Quater {
@@ -70,4 +72,57 @@
   color           : #fff;
   background-color: #3f51b5;
   margin-top      : 15px !important;
+}
+
+.Select {
+  width         : 100%;
+  height        : 48px;
+  font-weight   : 400;
+  line-height   : 1.1876em;
+  font-size     : 1rem;
+  letter-spacing: 0.00938em;
+  border        : none;
+  background    : #fff;
+  border-bottom : 1px gray solid;
+}
+
+.css-yk16xz-control {
+  border       : none !important;
+  border-bottom: 1px gray solid !important;
+  border-radius: 0px !important;
+}
+
+.error {
+  margin-top    : 10px;
+  font-size     : 1rem;
+  letter-spacing: .5px;
+  color         : red;
+}
+
+.sel:hover {
+  /* outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px; */
+  border-bottom: 2px black solid !important;
+}
+
+.cTeam {
+  border: 1px gray solid;
+  width : 40%;
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.standard-basic {
+  width   : 100%;
+  overflow: hidden;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.last {
+  color      : gray;
+  /* font-family: time; */
+}
+.body{
+  font-family: 'Times New Roman', Times, serif;
 }

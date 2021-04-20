@@ -29,6 +29,7 @@ let border = {
 }
 
 export default function Navebar() {
+    const [propbtn, setpropbtn] = useState(true)
     const classes = useStyles();
     let obj = {
         fname: "",
@@ -48,11 +49,14 @@ export default function Navebar() {
 
     const [show, setShow] = useState(true);
 
-    const handleChange=(e)=>{
+    const handleChange = (e) => {
         e.preventDefault();
-        setShow(pre=>!pre)
+        if(final.length>0)
+        {
+            setShow(pre=>!pre)
+        }
     }
-    const handleChange1=(e)=>{
+    const handleChange1 = (e) => {
         e.preventDefault()
         setShow(pre=>!pre)
     }
@@ -60,22 +64,15 @@ export default function Navebar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon /> */}
-                    {/* </IconButton> */}
-                    {/* <Typography variant="h6" className={classes.title}>
-                        Compose Team
-          </Typography> */}
-                    {show ? <Button style={border} className={classes.title} onClick={handleChange}>Compose Team</Button>:<Button style={{color:"#fff"}} className={classes.title} onClick={handleChange}>Compose Team</Button>}
-                    {!show ? <Button style={border} className={classes.title} onClick={handleChange1}>First Quater</Button>:<Button className={classes.title} onClick={handleChange1}>First Quater</Button>}
-                    {/* <Typography variant="h6" className={classes.title}>
-                        <button>First Quater</button>
-          </Typography> */}
-                    {/* <Button color="inherit">Login</Button> */}
+                    {show ? <Button style={border} className={classes.title} onClick={handleChange}>Compose Team</Button> : <Button style={{ color: "#fff" }} className={classes.title} onClick={handleChange}>Compose Team</Button>}
+                    {!show ? <Button style={border} className={classes.title} onClick={handleChange1} disabled={propbtn} >First Quater</Button> : <Button className={classes.title} onClick={handleChange1} disabled={propbtn}>First Quater</Button>}
                 </Toolbar>
             </AppBar>
-            { show && <ComposeTeam obj={obj} players={players} setplayers={setplayers} final={final} setFinal={setFinal} fPos={fPos} setfPos={setfPos}  />}
-            {!show && <FirstQuater  final={final} />}
+            <br></br>
+            <br></br>
+            <br></br>
+            { show && <ComposeTeam setpropbtn={setpropbtn} propbtn={propbtn} obj={obj} players={players} setplayers={setplayers} final={final} setFinal={setFinal} fPos={fPos} setfPos={setfPos} />}
+            {!show && <FirstQuater final={final} />}
         </div>
     );
 }
